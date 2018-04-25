@@ -6,7 +6,7 @@ class AboutPage extends React.Component {
     return (
       <div className="jumbotron">
         <h1>About</h1>
-        <p>This application uses React, Redux and a bunch of other helpful libraries</p>
+        <p>This application is a react skeleton to start coding on</p>
       </div>
     );
   }
