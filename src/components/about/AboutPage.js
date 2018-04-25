@@ -4,11 +4,11 @@ class AboutPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="jumbotron">
         <h1>About</h1>
         <p>This application uses React, Redux and a bunch of other helpful libraries</p>
       </div>
-    )
+    );
   }
 }
 
