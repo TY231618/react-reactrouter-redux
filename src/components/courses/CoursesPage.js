@@ -10,6 +10,15 @@ class CoursesPage extends React.Component {
     super(props, context);
   }
 
+  // componentDidMount() {
+  //   if(this.props.course < 1) {
+  //     return (
+  //       <div>Loading...</div>
+  //     );
+  //   }
+  //   this.props.loadCourses;
+  // }
+
   render() {
     const { courses } = this.props;
     // debugger;
@@ -28,7 +37,6 @@ CoursesPage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-  // debugger;
   return {
     courses: state.courses
   };

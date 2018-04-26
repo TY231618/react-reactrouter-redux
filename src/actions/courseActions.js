@@ -3,7 +3,6 @@ import courseApi from '../api/mockCourseApi';
 
 export function loadCoursesSuccess(courses) {
 
-  // debugger;
   return {
     type: LOAD_COURSES_SUCCESS,
     courses: courses
