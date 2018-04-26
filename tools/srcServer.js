@@ -21,6 +21,4 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, (err) => {
   if (err) return console.log('Error starting dev server: ', err);
-
-  open(`http://localhost:${PORT}`);
 });
