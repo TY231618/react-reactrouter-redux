@@ -1,10 +1,26 @@
-import { LOAD_COURSES_SUCCESS } from './actionTypes';
+import * as types from './actionTypes';
 import courseApi from '../api/mockCourseApi';
 
 export function loadCoursesSuccess(courses) {
 
   return {
-    type: LOAD_COURSES_SUCCESS,
+    type: types.LOAD_COURSES_SUCCESS,
+    courses: courses
+  };
+}
+
+export function updateCourseSuccess(courses) {
+
+  return {
+    type: types.UPDATE_COURSE_SUCCESS,
+    courses: courses
+  };
+}
+
+export function createCourseSuccess(courses) {
+
+  return {
+    type: types.CREATE_COURSE_SUCCESS,
     courses: courses
   };
 }
@@ -18,6 +34,18 @@ export function loadCourses() {
       })
       .catch(err => {
         throw(err);
+      });
+  };
+}
+
+export function saveCourse(course) {
+  return function (dispatch) {
+    return courseApi.saveCourse(course)
+      .then(savedCourse => {
+        course.id ? dispatch(updateCourseSuccess(savedCourse)) : dispatch(createCourseSuccess(savedCourse))
+      })
+      .catch(error => {
+        throw(error);
       });
   };
 }
