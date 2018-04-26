@@ -1,8 +1,8 @@
-import { CREATE_COURSE } from '../actions/actionTypes';
+import { LOAD_COURSES_SUCCESS } from '../actions/actionTypes';
 export default (state = [], action) => {
 
   switch(action.type) {
-    case CREATE_COURSE:
+    case LOAD_COURSES_SUCCESS:
 
       // debugger;
       // bad mutable way
@@ -10,7 +10,7 @@ export default (state = [], action) => {
       // return state;
 
       // good immutable way
-      return [...state, Object.assign({}, action.course)];
+      return action.courses;
     
     default: 
       return state;
