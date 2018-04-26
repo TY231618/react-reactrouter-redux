@@ -19,7 +19,7 @@ const CourseList = ({ courses }) => {
         { 
           courses.map(course => {
             return <CourseListRow key={ course.id } course={ course } />
-          }) 
+          })
         }
       </tbody>
     </table>
