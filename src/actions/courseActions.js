@@ -9,19 +9,19 @@ export function loadCoursesSuccess(courses) {
   };
 }
 
-export function updateCourseSuccess(courses) {
+export function updateCourseSuccess(course) {
 
   return {
     type: types.UPDATE_COURSE_SUCCESS,
-    courses: courses
+    course: course
   };
 }
 
-export function createCourseSuccess(courses) {
+export function createCourseSuccess(course) {
 
   return {
     type: types.CREATE_COURSE_SUCCESS,
-    courses: courses
+    course: course
   };
 }
 
@@ -39,6 +39,7 @@ export function loadCourses() {
 }
 
 export function saveCourse(course) {
+  console.log('save THUNK', course);
   return function (dispatch) {
     return courseApi.saveCourse(course)
       .then(savedCourse => {
