@@ -4,7 +4,6 @@ import SelectInput from '../common/SelectInput';
 
 const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => {
 
-  console.log('courseForm ', course);
   return (
     <form>
       <TextInput 
