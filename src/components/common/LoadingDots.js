@@ -8,10 +8,6 @@ class LoadingDots extends React.Component {
     this.state = { frame: 1 };
   }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState({
@@ -20,6 +16,10 @@ class LoadingDots extends React.Component {
     }, this.props.interval);
   }
   
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
 
     let dots = this.state.frame % (this.props.dots + 1);

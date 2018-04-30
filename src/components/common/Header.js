@@ -4,7 +4,6 @@ import LoadingDots from './LoadingDots';
 
 const Header = ({loading}) => {
 
-  console.log(loading);
   return (
     <nav>
       <IndexLink to="/" activeClassName="active" >Home</IndexLink>

@@ -11,7 +11,6 @@ export function loadAuthorSuccess(authors) {
 
 export function loadAuthors() {
   return dispatch => {
-    console.log('loadAuthors ======', dispatch);
     dispatch(beginAjaxCall());
     return authorApi.getAllAuthors()
       .then(authors => {
