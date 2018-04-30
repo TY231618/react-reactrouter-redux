@@ -29,6 +29,7 @@ export function createCourseSuccess(course) {
 export function loadCourses() {
 
   return function(dispatch) {
+    console.log('loadCourses ======', dispatch);
     dispatch(beginAjaxCall());
     return courseApi.getAllCourses()
       .then(courses => {
@@ -42,6 +43,7 @@ export function loadCourses() {
 
 export function saveCourse(course) {
   return function (dispatch) {
+    console.log('saveCourses ======', dispatch);
     dispatch(beginAjaxCall());
     return courseApi.saveCourse(course)
       .then(savedCourse => {
