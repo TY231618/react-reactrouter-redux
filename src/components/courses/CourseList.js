@@ -18,7 +18,7 @@ const CourseList = ({ courses }) => {
       <tbody>
         { 
           courses.map(course => {
-            return <CourseListRow key={ course.id } course={ course } />
+            return <CourseListRow key={ course.id } course={ course } />;
           })
         }
       </tbody>

@@ -2,9 +2,9 @@ import React, { PropTypes} from 'react';
 import { Link, IndexLink } from 'react-router';
 import LoadingDots from './LoadingDots';
 
-const Header = (props) => {
+const Header = ({loading}) => {
 
-  console.log(props.loading);
+  console.log(loading);
 
   return (
     <nav>
@@ -14,12 +14,12 @@ const Header = (props) => {
       {" | "}
       <Link to="/courses" activeClassName="active" >Courses</Link>
       {" | "}
-      { props.loading && <LoadingDots interval={100} dots={20} /> }
+      { loading && <LoadingDots interval={100} dots={20} /> }
     </nav>
   );
 };
 
-Header.propsTypes = {
+Header.propTypes = {
   loading: PropTypes.bool.isRequired
 };
 
