@@ -7,8 +7,8 @@ export default {
   noInfo: false,
   entry: [
     'eventsource-polyfill',
-    'webpack-hot-middleware/client',
-    './src/index'
+    'webpack-hot-middleware/client?reload=true',
+    path.resolve(__dirname, 'src/index')
   ],
   target: 'web',
   output: {
@@ -17,7 +17,7 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './src'
+    contentBase: path.resolve(__dirname, 'src')
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
